@@ -5,6 +5,8 @@
     <%= form.label "name", "New Place" %>
     <%= form.text_field "name" %>
   </p>
+    <!-- So we can transfer state from the previous action to the next -->
+  <%= form.hidden_field "place_id" %>
   <%= form.submit %>
 <% end %>
 

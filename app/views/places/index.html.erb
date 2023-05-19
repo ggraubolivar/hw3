@@ -1,0 +1,7 @@
+<% places = Place.all %>
+<h1>Here are the places you have visited!</h1>
+<ul>
+  <% for place in places %>
+    <li><%= place["name"] %> </li>
+  <% end %>
+</ul>

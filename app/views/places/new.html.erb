@@ -1,0 +1,10 @@
+<h1>Seems like you visited somewhere new!.</h1>
+
+<%= form_with :model => @place do |form| %>
+   <p>
+    <%= form.label "name", "Enter the name of the place you visited!" %>
+    <%= form.text_field "name" %>
+  </p>
+  <%= form.submit %>
+<% end %>
+

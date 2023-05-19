@@ -1,4 +1,5 @@
 class PlacesController < ApplicationController
+  
   def index
     @places = Place.all
   end
@@ -8,13 +9,10 @@ class PlacesController < ApplicationController
   end
 
   def create
-    # start with a new Place
-    @place = Place.new
-
     # assign user-entered form data to Place's columns
+    @place = Place.new
     @place["name"] = params["name"]
-    
-    # save Contact row
+    # save Place row
     @place.save
 
     # redirect user

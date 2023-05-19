@@ -8,6 +8,10 @@ class PlacesController < ApplicationController
     @place = Place.new
   end
 
+  def show
+    @place = Place.find_by({ "id" => params["id"] })
+  end
+
   def create
     # assign user-entered form data to Place's columns
     @place = Place.new
@@ -20,9 +24,9 @@ class PlacesController < ApplicationController
   end
   
   def destroy
-    @place = Place.find_by({ "name" => params["place"]["name"] })
+    @place = Place.find_by({ "id" => params["id"] })
     @place.destroy
-    redirect_to "/companies"
+    redirect_to "/places"
   end
 
 end

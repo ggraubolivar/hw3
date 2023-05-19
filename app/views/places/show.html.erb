@@ -1,0 +1,14 @@
+<h1><%= @place["name"] %></h1>
+
+<h2><%= @place["city"] %>, <%= @place["state"] %></h2>
+
+<h3>Activity Log</h3>
+
+<p>
+  <a href="/places/new?place_id=<%= @place["id"] %>">New Place</a>
+</p>
+
+<p><a href="/places">Back to All Companies</a></p>
+
+<p><%= button_to "Delete this place", @place, :method => "delete" %></p>
+  
